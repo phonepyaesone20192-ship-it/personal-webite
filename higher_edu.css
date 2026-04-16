@@ -1,0 +1,174 @@
+
+/* designing the user guide box */
+.user__guide{
+  display: inline-block;/* Makes the box only as wide as its content */
+
+  padding: 12px 20px;    /* Space inside the box (top/bottom, left/right) */
+
+  border-radius: 12px;/* Rounded corners */
+
+  color: white; /* Text color */
+  font-weight: bold;
+
+  /* gradient from dark green to softer green */
+  background: linear-gradient(to right, #1b5e20, #4caf50);
+
+  box-shadow: 20px 20px 50px grey;/* Shadow effect*/
+
+  margin: 20px 0;/* Space above and below the box */
+}
+
+
+/* ---------- Page container ---------- */
+.container{
+  max-width: 1100px;/* Limits page width so it doesn’t stretch too wide */
+  margin: 0 auto;/* Centers the container horizontally */
+  padding: 48px 24px; /* Space inside the container */
+}
+
+
+/* ---------- Grid layout ---------- */
+.card__container{
+  display: grid;/* Uses CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));/* Creates as many columns as will fit,
+     each card is at least 260px wide, otherwise it stretches */
+  gap: 40px;  /* Space between cards */
+}
+
+
+/* ---------- Card border ---------- */
+.card__article{
+  border-radius: 24px;
+  overflow: hidden;/* Prevents image from sticking out */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  margin:0;
+}
+
+
+/* ---------- 4) Card image ---------- */
+.card__img{
+  width: 100%;/* Fill card width */
+  height: 230px; /* Fixed image height */
+  object-fit: cover;/* Crops image to fit without stretching */
+  display: block; /* Removes small gaps under images by making the image block */
+}
+
+
+/* ---------- 5) White box under image ---------- */
+.card__data{
+  padding: 22px;
+  text-align: center; /* Centers this class   */
+   
+}
+
+
+/* ---------- 6) Title (green button style) ---------- */
+
+.card__title,.card__title__clickable{
+  display: inline-block;
+
+  padding: 10px 18px;
+  
+  border-radius: 15px;
+
+  background: #2f7d326d;
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+
+  max-width: 90%;
+  text-align: center;
+}
+.card__title{
+  background: #2f7d326d ;
+}/* Softer (card_title) color and darker (card__title__clickable)*/
+.card__title__clickable{
+  background: #2f7d32 ;
+}
+
+
+/* Popup box (hidden by default) */
+.card__description{
+  opacity: 0;/* Makes this class invisible */
+  pointer-events: none;/* Prevents clicking when hidden */
+
+  position: fixed; /*making it pop up at the same position all the time*/
+  left: 50%;/* Moves horizontally to center */
+  top: 50%;/* Moves vertically to center */
+  transform: translate(-50%, -50%) scale(0.95);/* Centers the popup */
+
+  width: min(650px, 92vw);
+  background: #ffffff;
+  color: #111111;
+
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.30);
+
+  transition: 0.25s ease;/* Smooth transition for the class */
+  z-index: 2001;/* Places it above the content**/
+}
+
+ /* Darken the background after the pop up come up*/
+.card__data::after{
+  content: ""; 
+  position: fixed; 
+  inset: 0;/* Covers top, bottom, left, right */
+  background: rgba(0, 0, 0, 0.35);
+
+  opacity: 0; /* Hidden at first */
+  pointer-events: none;
+
+  transition: 0.25s ease;  
+  z-index: 2000;
+}
+
+
+ 
+.card__data:hover .card__description{
+  opacity: 1; /* Make popup visible when it got hovered */
+  pointer-events: auto;/* Allow clicking */
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.card__data:hover::after{
+  opacity: 1;
+}
+
+/*Responsive design */
+@media (max-width: 900px){
+
+   
+  .container{
+    padding: 20px 12px;/* Smaller padding on small screens */
+  }
+
+   
+  .card__container{
+    grid-template-columns: 1fr; /* Only one column per class */
+    gap: 25px;  /* Smaller spacing */ 
+  }
+
+  /* slightly smaller images */
+  .card__img{
+    height: 180px; 
+  }
+
+  /* titles fit better */
+  .card__title,
+  .card__title__clickable{
+    font-size: 16px;  
+    padding: 8px 14px; 
+    max-width: 95%;
+  }
+
+  /* popup fits smaller screens */
+  .card__description{
+    width: min(520px, 92vw);
+    padding: 18px;
+    font-size: 14px;
+  }
+}
+ 

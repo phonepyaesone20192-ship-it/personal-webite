@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaplan College</title> <!-- this give a name to the webpage titel-->
+    <link rel="icon" type="image/x-icon" href="Photos/Favicon.png"> <!--favicon-->
+     <link rel="stylesheet" href="layout.css"> <!--external css sheet-->
+     <link rel="stylesheet" href="Kaplan.css"> <!--external css sheet-->
+</head>
+<body>
+    <h1 class="headings">Kaplan Page</h1>
+    <!--Navigation bar-->
+   <nav class="navbar"><!-- nav is used to create navigation section -->
+      <ul><!--list of naviagtion links, Used unordered list so that its easier to style by removing the original list  style-->
+        <li><a href="index.html" > &#127968; Home</a></li><!--home page link-->
+        <li><a href="higher_education.html">&#127979; Higher Education</a></li><!--higher education page link-->
+        <li><a href="previous_education.html" >&#129489;&#8205;&#128187; Previous Education</a></li><!--previous education page link-->
+        <li><a href="Conceptx.html"> &#127942; Last School</a></li><!--last shcool page link-->
+        <li><a href="Kaplan.html" class="activeNavBar">&#127891; Kaplan</a></li><!--kaplan page link, class is used to style this-->
+        <li><a href="summary.html">&#128203; Summary</a></li><!--summary page link-->
+        
+    </ul>
+  </nav>
+<main> <!-- main is used to wrap main content of the webpage -->
+  <div class="whole_page">
+      <div class="top_page"> <!-- divide page into three part and this is top part-->
+          <!-- image of Kaplan-->
+          <img src="Photos/KaplanIntPath.png" alt="Image Of Kaplan" title="Kaplan International Pathways"> <!-- img is used to display Kaplan imageand alt is used to show the text when the image doesnt work and title shows tooltip when hovered -->
+
+          <div id="description">
+                <!-- div is used to group text description -->
+
+            <h1>About Kaplan</h1><!-- heading for this section -->
+           <!-- p is used for paragraph text -->
+             <p>Kaplan International Pathways is an organisation that helps international students prepare for &amp; gain admission to universities around the world.
+              It offers pathway courses, including degree preparation &amp; English language support, to help students meet academic &amp; language requirements for university study.
+              Kaplan partners with many universities in countries such as the UK, USA, Canada, Australia, &amp; New Zealand, giving students access to a wide range of degree options. 
+              The organisation also provides support throughout the application process, including advice on choosing courses, applying to universities, &amp; settling into student life abroad. 
+              Its goal is to help students successfully progress to university &amp; build strong academic &amp; career futures.</p>
+          </div>
+       
+      </div>
+<hr><!-- hr is used to visually separate sections by adding a line -->
+<!-- divide page into three part and this is middle part-->
+      <div class="middle_page">
+          <h1>University Connected To Kaplan</h1>
+            <div class="universities"> <!-- div is used to show a layout for the content inside it, in this case ,putting university side  by side in the middle of the page-->
+
+              <div class="uni"> <!-- div groups each university image and name -->
+                <!-- university image-->
+                  <img src="Photos/univeristy of liverpool.png" alt="Image Of The Univeristy" title="University Of Liverpool">
+                  <span>University Of Liverpool</span> <!-- span is used to add inline text for the image-->
+              </div>
+
+              <div class="uni"><!-- div groups each university image and name -->
+                 <!-- university image-->
+                  <img src="Photos/univeristy of york.jpg" alt="IImage Of The Univeristy"title="University Of York">
+                  <span>University Of York</span><!-- span is used to add inline text for the image-->
+              </div>
+
+              <div class="uni"><!-- div groups each university image and name -->
+                 <!-- university image-->
+                  <img src="Photos/university of birmingham.png" alt="Image Of The Univeristy"title="University Of Birmingham">
+                  <span> Univeristy Of Birmingham</span><!-- span is used to add inline text for the image-->
+              </div>
+
+              <div class="uni"><!-- div groups each university image and name -->
+                <!-- university image-->
+                  <img src="Photos/university of bristol.avif" alt="Image Of The Univeristy"title="University Of Bristol">
+                  <span>University Of Bristol</span> <!-- span is used to add inline text for the image-->
+              </div>
+
+            </div>
+            <!-- href is a link for user to see more aobut universities, targe= blank is used to ope the link in nextp age-->
+              <a href="https://www.kaplanpathways.com/where-to-study/" target="_blank" title="CLICK ME FOR MORE">MORE UNIVERSITIES</a>
+      </div>
+<hr>     <!-- hr is used to create line -->
+<!-- divide page into three part and this is bottom part-->
+      <div class="bottom_page">
+        <div class="myself">
+<!--a table aobut my information-->
+            <h1>About Me</h1>
+              <table> <!-- table is used to organise structured information clearly -->
+                <tr><!-- tr is used for table row-->
+                    <th>Field</th>
+                    <th>Information </th><!-- th is for table header-->
+                </tr>
+                <tr>
+                    <td>Name</td><!-- td is for table data-->
+                    <td>Phone Pyae Sone</td>
+                </tr>
+                <tr>
+                    <td>Kaplan Id</td>
+                    <td>P-496456</td>
+                </tr>
+                <tr>
+                    <td>University</td>
+                    <td>UWE Bristol</td>
+                </tr>
+                 <tr>
+                    <td>Position</td>
+                    <td>Student</td>
+                </tr>
+                <tr>
+                    <td>Major</td>
+                    <td>Computer Science </td>
+                </tr>
+                <tr>
+                    <td>Year</td>
+                    <td>International Year One</td>
+                </tr>
+            </table>
+        </div>
+    <!-- a table aobut my modules-->
+        <div class="modules">
+            <h1>About modules</h1>
+            <table>
+                <tr>
+                    <th>Modules</th>
+                    <th>What I learned</th>
+                </tr>
+                <tr>
+                    <td>Computer Architecture</td>
+                    <td> how computers work internally, including the CPU, memory, &amp; how data is processed &amp; executed</td>
+                </tr>
+                <tr>
+                    <td>Web Programming</td>
+                    <td> how to create &amp; design websites using HTML &amp; CSS to build structured &amp; styled web pages.</td>
+                </tr>
+                <tr>
+                    <td>Principle Of Computing</td>
+                    <td>the basic concepts of computing, including algorithms, problem-solving, &amp; logical thinking.</td>
+                </tr>
+                 <tr>
+                    <td>Programming In C++</td>
+                    <td> how to write programs using C++ with variables, loops, functions, &amp; basic programming logic.</td>
+                </tr>
+                <tr>
+                    <td>Artificial Intelligence</td>
+                    <td>  the basic concepts of AI &amp; how machines can learn, make decisions, &amp; solve problems automatically.</td>
+                </tr>
+                <tr>
+                    <td>Database</td>
+                    <td> how to organize &amp; manage data using databases &amp; how to use SQL to store &amp; retrieve information.</td>
+                </tr>
+                <tr>
+                    <td>Digital Evidence</td>
+                    <td> how digital data can be collected, analyzed, &amp; used as evidence in cybersecurity &amp; investigations.</td>
+                </tr>
+            </table>
+       </div>
+           
+
+      </div>
+  </div>
+  
+</main>
+
+<!-- navigation at the bottom -->
+    <div class="page_navigation"> <!-- div is used to make it as a independent box at the bottom of the page ,easier to place and style-->
+    <div class="nav_buttons">
+      <a href="Conceptx.html" class="btn">&larr; Last school</a>
+      <a href="summary.html" class="btn">Summary Page &rarr;</a>
+    </div>
+  </div>  
+</body>
+</html>

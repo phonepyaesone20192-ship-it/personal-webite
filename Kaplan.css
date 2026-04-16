@@ -1,0 +1,189 @@
+ 
+ /*the kaplan and the description*/
+ /*Headings*/
+ #description h1,
+.middle_page h1,
+.myself h1,
+.modules h1{
+    margin: 0 0 25px 0;/* space below heading */
+    text-decoration: underline; /* underline the text */
+    font-weight: bold;/* make text bold */
+    text-align: left;/* align text to the left */
+}
+
+
+/* TOP SECTION */
+.top_page{
+  display: flex;/* places image and description side-by-side */
+  align-items: flex-start;/* align items to the top */
+  gap: 25px; /* space between image and text */
+}
+
+/* IMAGE */
+.top_page img{
+  width: 220px; /* fixed image width */
+  height: auto;
+  display: block; /* making the image look like seperated just like a box*/
+  margin: 70px;
+     
+}
+
+/* DESCRIPTION COLUMN */
+#description{ /*id selector*/
+  flex: 1;        /* take space of the flex used */
+  min-width: 0; /* prevents overflow issues */
+ 
+}
+ 
+/* PARAGRAPH */
+#description p{
+  margin: 0;/* remove default margin */
+  width: 100%;
+  box-sizing: border-box; /* include padding inside width by making it look like a box */
+
+  background-color: #dff5df;      /*back gorund color changes */
+  padding: 20px;
+
+  border-left: 3px solid #7fbf3b; /* created a green line using this*/
+  line-height: 1.6;
+}
+
+
+
+/* MIDDLE PAGE  */
+.middle_page{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f7eeeee7;
+    border-radius: 20px;/* rounded corners for the box*/
+}
+
+
+/* UNIVERSITIES ROW */
+.universities{
+    display: flex; /* place university boxes side-by-side */
+    gap: 25px;
+    width: 100%;
+}
+
+/* EACH UNIVERSITY CONTAINER */
+.uni{
+    flex: 1; /* equal space for each university */
+    position: relative;
+
+    display: flex;
+    justify-content: center; /* center content of the flex horzontally*/
+    align-items: center; /* center content of the flex vertically*/
+}
+
+/* IMAGE STYLE */
+.uni img{
+    width: 100%;
+    height: 140px;
+    object-fit: contain;/* keep full image visible */
+
+    background-color: white;
+    padding: 15px;
+
+    border-radius: 15px;
+    border: 2px solid #7fbf3b;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;/* smooth hover effect */
+}
+
+/* UNIVERSITY NAME (HIDDEN) */
+.uni span{
+    position: absolute;/* allow the span to sit show over on the image */
+    bottom: 10px;
+
+    background-color: #2e7d32;
+    color: white;
+
+    padding: 5px 12px;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    opacity: 0;/* hidden by default */
+    transition: opacity 0.3s ease; /* smooth fade effect */
+}
+
+.uni:hover span{
+    opacity: 1; /* make visible when it is hovered */
+}
+
+/* LINK BUTTON */
+.middle_page a{
+    display: inline-block; /* behave like box */
+    margin-top: 25px;
+    padding: 10px 18px;
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;/* smooth hover */
+}
+
+/*   HOVER effect*/
+.uni:hover img,
+.middle_page a:hover{
+    transform: translateY(-10px);/* move up slightly when it got hovered */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);/* shadow effect */
+}
+
+/* Bottom page */
+.bottom_page{
+    display: flex;
+    gap: 200px;
+}
+.myself{
+    margin-left: 85px;
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media (max-width: 900px){
+
+  /* Stack top section (image and description) */
+  .top_page{
+    flex-direction: column; /* stack vertically */
+    gap: 20px;
+  }
+
+  .top_page img{
+    margin: 20px auto;     /* center image */
+    width: min(260px, 80%);
+    height: auto;
+  }
+
+  /* Middle box padding */
+  .middle_page{
+    padding: 16px;
+  }
+
+  /* University logos stack on eacother */
+  .universities{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .uni img{
+    height: 120px;/* slightly smaller image */
+  }
+
+  /* Bottom section (two tables) stack */
+  .bottom_page{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .myself{
+    margin-left: 0;        /* remove margin */
+  }
+
+   
+}
+
+

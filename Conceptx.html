@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptx International School</title>
+    <!-- Title shown in browser tab -->
+    <link rel="icon" type="image/x-icon" href="Photos/Favicon.png"> <!--favicon-->
+     <link rel="stylesheet" href="layout.css"> <!--external css sheet-->
+     <link rel="stylesheet" href="Conceptx.css"> <!--external css sheet-->
+     <style> /*internal css*/
+
+        /*Styling the hobbies box*/
+        .hobbies{
+            flex: 1;/* Takes 1 share of space (smaller than subjects) */
+        background: linear-gradient(to right, #0b6b0b, #8fbc66);/* Green gradient */
+            color: white;  /* changing the color to white */
+
+            padding: 30px; /* Space inside the box */
+            margin: 40px 40px 40px 0px;/* Space outside the box */ 
+
+
+            border-radius: 15px;  
+            box-shadow: 20px 20px 50px 15px rgba(110, 110, 110, 0.544);
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;/* transformation effect when it is hovered */
+        }
+
+        /* heading */
+        .hobbies h1 {
+            text-align: center;/* Center the hobbies heading */
+            margin-bottom: 20px;/* have a little gap from the bottom*/
+        }
+
+        /* list */
+        .hobbies ul {
+            padding-left: 20px;         /* making the unorderd list having a little space from the left*/
+        }
+        
+        .hobbies li {
+            margin-bottom: 8px;/* Space between list items */
+            font-size: 18px;/* size of the text font*/
+            }
+        .hobbies{
+             margin: 20px 0;
+            }
+     </style>
+</head>
+<body>
+    <h1 class="headings">LastSchool Page</h1>
+    <!--Navigation bar-->
+    <nav class="navbar"> <!-- nav is used to create navigation section -->
+      <ul><!--list of naviagtion links, Used unordered list so that its easier to style by removing the original list  style-->
+        <li><a href="index.html" > &#127968; Home</a></li><!--home link-->
+        <li><a href="higher_education.html">&#127979; Higher Education</a></li><!--higher education page link-->
+        <li><a href="previous_education.html" >&#129489;&#8205;&#128187; Previous Education</a></li><!--previous education page link-->
+        <li><a href="Conceptx.html" class="activeNavBar"> &#127942; Last School</a></li><!--last school page link, class is used to style this-->
+        <li><a href="Kaplan.html">&#127891; Kaplan</a></li><!--kaplan  page link-->
+        <li><a href="summary.html">&#128203; Summary</a></li><!--summary page link-->
+        
+    </ul>
+    </nav>
+<main> <!-- main is used to wrap main content of the webpage -->
+<div class="whole_page"><!-- div is used as main container for the whole page layout -->
+    <div class="top_page"><!-- to divide the page into two part and this is top part-->
+        <video controls autoplay muted title="CAMPUS VIDEO"> 
+            <!-- video tag is used to embed a video, controls is used for play/pause, autoplay is to make the video autoplay when the webpage is open, and mute is to make the video muted -->
+            <source src="Photos/Conceptx.mp4" type="video/mp4"><!-- source is used to define video file and its type -->
+            Your browser does not support the video tag.  <!-- fallback text if browser does not support video -->
+        </video>
+<!-- a box about my school-->
+        <div class="about_school">
+            <h1>ABOUT CONCEPTX INTERNATIONAL SCHOOL</h1>
+<!--make a list of description using unordered list-->
+            <ul>
+                <li>ConceptX is an online learning platform focused on improving education, especially for Grade 11 students, by providing structured video courses &amp; learning resources.</li>
+                <br>
+                <li>The school's vision is to educate people through open &amp; compassionate education, helping students grow intellectually &amp; prepare for the future.</li>
+               <br>
+                <li>Courses are taught by experienced instructors who graduated from countries such as the United States, Thailand, &amp; Malaysia, ensuring high-quality teaching.</li>
+                <br>
+                <li>ConceptX focuses on helping students understand concepts deeply rather than memorising, using carefully explained lessons from easy to advanced levels.</li>
+                <br>
+                <li>The platform provides educational videos, ebooks, &amp; affordable learning resources to support students &amp; improve access to quality education.</li>
+
+            </ul>
+
+        </div>
+    </div>
+<hr><!-- hr is used to visually separate top and bottom sections by making a line-->
+
+    <div class="bottom_page"> <!--div is used to divide the page into two part and this is bottom part-->
+        <div class="hobbies">        <!-- div groups hobbies section -->
+
+            <h1>My hobbies in highschool</h1> <!-- heading for hobbies section -->
+            <!-- list of my hobbies-->
+            <ol>
+                <li>Football</li>
+                <li>Table-Tennis</li>
+                <li>Playing Chess</li>
+                <li>Learning New Languages</li>
+                <li>Reading Books</li>
+                <li>Volunteering</li>
+            </ol>
+        </div>
+  
+        <div class="subjects">
+            <h1>Subjects I Took</h1>
+<!-- table of the subject i took-->
+            <table>
+                <tr><!-- tr defines a table row -->
+                    <th>Subjects</th><!-- th defines a table header -->
+                    <th>About</th>
+                </tr>
+                <tr>
+                    <td>English</td><!-- td defines a table data -->
+                    <td>English as First Language focuses on reading comprehension, analysis, and writing skills rather than memorisation.</td>
+                </tr>
+                <tr>
+                    <td>Mathematic B</td>
+                    <td>Math B covers core mathematics and is essential for many future subjects. </td>
+                </tr>
+                <tr>
+                    <td>Further Pure Mathematic</td>
+                    <td>This is an advanced maths subject for strong maths students. </td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td>Physics explains how the universe works, including motion, energy, electricity, and waves.</td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td>Chemistry studies substances, reactions, and how matter changes.</td>
+                </tr>
+                <tr>
+                    <td>Computer Science</td>
+                    <td>Computer Science teaches how computers work and programming.</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>    
+</main>
+ 
+<!-- navigation at the bottom -->
+     <div class="page_navigation"> <!-- div is used to make it as a independent box at the bottom of the page ,easier to place and style-->
+    <div class="nav_buttons">
+        <a href="previous_education.html" class="btn">&larr; Previous Education</a>
+        <a href="Kaplan.html" class="btn"> Kaplan &rarr;</a>
+    </div>
+</div> 
+</body>
+</html>

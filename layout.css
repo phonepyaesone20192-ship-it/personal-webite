@@ -1,0 +1,144 @@
+
+body{
+  margin: 0;/* remove default browser margin */
+  background: #f7eeeee7; /* changes the background color */
+  color: black; /*changed the text color*/
+  
+}
+
+h1{
+  text-align: center;/* center all h1 headings */
+}
+
+.navbar ul{
+  list-style: none;/* remove default bullet points */
+  background: rgb(133, 183, 58);
+  padding: 0; /* remove default padding */
+  margin: 0;/* remove default margin */
+  display: flex;   /* place items side-by-side */
+}
+
+.navbar li{
+  flex: 1;  /* make each item equal width */
+}
+
+.navbar a{
+  display: block; /* make entire area clickable by making it act like a box block */
+  text-align: center;         /* center text inside each link*/
+  color: white;
+  text-decoration: none; /* remove defult underline */
+  padding: 15px 0;
+   
+}
+
+.navbar a:hover{
+  background: rgb(87, 140, 9); /* changes color when hover */
+}
+
+.navbar a.activeNavBar{
+  background:rgb(87, 140, 9);
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/*navigation bar below at the page */
+
+ 
+.page_navigation{
+    text-align: center; /* center content */
+    margin-top: 20px;
+}
+.nav_buttons{
+    margin-top: 20px;
+}
+.btn{
+    display: inline-block;  /* make the text act like a box and button */
+    padding: 12px 25px;
+    margin: 10px;
+    background: #7cb342;  
+    color: white;
+    text-decoration: none; 
+    font-weight: bold; /* bold text */
+    border-radius: 6px;/* rounded corners */
+    transition: 0.3s ease; /* smooth transition effect */
+}
+.btn:hover{
+    background: #558b2f; 
+    transform: scale(1.05);/* slightly enlarge button */
+}
+
+
+
+.headings{
+    color: rgb(133, 183, 58);
+}
+ 
+/*tables*/
+table th{
+  border: 2px solid rgb(133, 183, 58);
+  border-radius:15px 50px;
+  padding:10px;
+
+}
+table td{
+    border: 2px solid rgb(133, 183, 58);
+    padding:10px;
+   
+}
+
+/*HRS*/
+hr {
+    border: none;/* remove default border */
+    height: 3px;
+    background-color: #7fbf3b;
+    border-radius: 5px;
+    margin:30px
+}
+
+ /*RESPONSIVE DESIGN*/
+
+@media (max-width: 900px){
+
+  /*  NAVBAR  */
+
+  .navbar ul{
+    flex-wrap: wrap;              /* allow items to move to next row */
+  }
+
+  .navbar li{
+    flex: 1 1 33.33%;             /* 3 items per row */
+  }
+
+  .navbar a{
+    font-size: 14px;
+    padding: 12px 0;
+  }
+
+
+  /* TABLES*/
+
+  table{
+    display: block;               /* prevent table crushing */
+    width: 100%;
+    overflow-x: auto;             /* allow horizontal scroll */
+    white-space: nowrap;/* prevent text wrapping */
+  }
+
+
+  /* BOTTOM NAV BUTTONS */
+
+  .nav_buttons{
+    display: flex;
+    flex-direction: column;       /* stack buttons vertically */
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn{
+    width: min(320px, 90%);
+    text-align: center;
+    margin: 0;
+  }
+
+}

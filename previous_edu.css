@@ -1,0 +1,114 @@
+/* Image styling */
+img {
+    width: 100%;
+    max-width: 300px;
+    object-fit: cover; /* keep image in the box */
+    margin-top: 15px; /* space above image */
+    display: block;  /* make the image act as a independent block */
+}
+
+/* Vertical line beside image */
+.vertical_line {
+    width: 3px;
+    background-color: #7fbf3b; /*background color changes*/
+    height: 180px;/* height of the line */
+    margin-left: 8px;  /* space from image */
+    margin-right: 20px; /* space before description */
+}
+
+/* Wrapper layout*/
+.wrapper {
+    padding: 0 15px;
+    display: flex;/* place items side-by-side */
+    flex-wrap: wrap; /* allow wrapping if needed */
+    align-items: center; /* center the item vertically */
+
+    /* keep elements close together */
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+/* Description box */
+.description {
+    flex: 1; /* take space of the flex used */
+    min-width: 250px;/* prevent too small shrinking by making limiting the minimum width  */
+
+     
+    background: linear-gradient(
+        to right,
+        #0a490a,
+        #0d7c0d,
+        #7db348c3
+    );/* green gradient background with shift color by using linear gradient*/
+
+    padding: 20px;/* space inside box */
+    border-radius: 15px;/* rounded corners */
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /*   shadow effect */
+}
+
+
+
+/* Paragraph styling */
+.description p {
+    margin: 0;
+    line-height: 1.6; /* space between lines (sentences) of the paragraph*/
+}
+
+/* Figcaption styling */
+figcaption {
+    font-size: 14px; /*the size of the text font*/
+    margin-top: 15px;
+    padding: 10px 16px;
+    border: 2px solid;
+    border-radius: 50px;
+    background-color: #2e7d32;
+    color: #fefefe;
+    font-weight: bold; /* making the text bold */
+     
+}
+
+/* Button styling */
+.description button {
+    margin-top: 15px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: #2e7d32;
+    font-weight: bold;
+    cursor: pointer; /* show pointer on hover */
+}
+/*hover effect*/
+.description button:hover {
+    background-color: #67b06d; /* change background color when it is hovered*/
+}
+/* RESPONSIVE DESIGN*/
+
+@media (max-width: 900px){
+
+  /* Stack image + description vertically */
+  .wrapper{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Hide vertical line on smaller screens */
+  .vertical_line{
+    display: none;
+  }
+
+  /* Make image responsive*/
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Make description full width */
+  .description{
+    width: 100%;
+    white-space: normal;
+  }
+
+}

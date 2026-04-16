@@ -1,0 +1,102 @@
+/*video + about school*/
+.top_page {
+    display: flex;/* Places items in a row */
+    align-items: flex-start;/* Aligns items to the top */
+    gap: 30px; /* Space a little bit between */
+}
+
+.about_school {
+    max-width: 100%;/* Prevents overflow from its container */
+}
+
+.whole_page {
+    padding: 20px;/* Space around the whole page content */
+}
+
+/*styling the video*/
+ video {
+    width: 350px;/* Fixed video width on desktop */
+    height: 350px;  /* Fixed video height on desktop */
+    object-fit: cover;/* make video to fill the box nicely */
+    border-radius: 15px;  /* Rounded corners */
+    box-shadow: 20px 20px 50px 15px  rgba(110, 110, 110, 0.544);/*  shadow effect*/
+}
+
+
+/*Bottom Page*/
+.bottom_page {
+    display: flex;/* Makes the content insdie it sit side-by-side */
+    gap: 40px;           /* space between two boxes */
+    align-items: flex-start; /* Top-align both sections */
+    padding: 20px;  /* Space inside the box */
+}
+
+
+
+
+/*styling the table*/
+.subjects {
+    text-align: center; /* Center heading + table area */
+     flex: 2;/* Takes twice of the space from the box(dix that this class is in)*/     
+}
+.subjects h1 {
+    margin-top: 15px;
+    padding: 10px 16px;
+    border-radius: 50px;
+    background-color: #2e7d32;/*  background color changes */
+    color: #fefefe;
+    font-weight: bold;
+    display: inline-block;  /*show the h1 as a inline block*/ 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*Animation*/
+.hobbies:hover,
+.subjects h1:hover {
+    transform: translateY(-10px); /* Move up slightly when it got hovered*/
+    box-shadow: 25px 25px 60px 20px rgba(110, 110, 110, 0.6); 
+}
+
+/*fonts*/
+table th,
+table td,
+.subjects h1,
+.hobbies h1,
+.hobbies li,
+.about_school{
+ font-family: "Comic Sans MS", cursive;/*  font design */
+}
+/*Responsive design */
+
+@media (max-width: 900px){
+
+  .top_page{
+    flex-direction: column; /* Stack video above text */
+    gap: 25px;
+  }
+
+  video{
+    width: 100%;/* Make video fit screen width */
+    height: auto;/* Keep correct ratio */
+  }
+
+  .bottom_page{
+    flex-direction: column;  /* Stack the flex item on column direction */
+    gap: 30px;
+  }
+
+
+  
+  .subjects table{
+    width: 100%;  /* Make table fill container */
+    font-size: 14px;      /* slightly smaller text */
+  }
+
+  .subjects th,
+  .subjects td{
+    padding: 8px;         /* reduce spacing */
+  }
+
+}
+
+ 

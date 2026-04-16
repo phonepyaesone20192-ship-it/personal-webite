@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+     <link rel="icon" type="image/x-icon" href="Photos/Favicon.png"> <!--favicon-->
+     <link rel="stylesheet" href="layout.css"> <!--css sheet-->
+<style>
+    .top, .bottom {
+    margin-top:20px;
+    margin-bottom: 40px; /* space between tables */
+}
+
+</style>
+</head>
+<body>
+    <h1 class="headings">Summary Page</h1>
+    <!--Navigation bar-->
+   <nav class="navbar">  <!-- nav is used to create navigation section -->
+    <ul><!-- unordered list is used to group navigation links -->
+        <li><a href="index.html" > &#127968; Home</a></li> <!--link to home page-->
+        <li><a href="higher_education.html">&#127979; Higher Education</a></li> <!--link to higher education page-->
+        <li><a href="previous_education.html" >&#129489;&#8205;&#128187; Previous Education</a></li> <!--link to previous education page-->
+        <li><a href="Conceptx.html"> &#127942; Last School</a></li> <!--link to last school page-->
+        <li><a href="Kaplan.html">&#127891; Kaplan</a></li> <!--link to kaplan page-->
+        <li><a href="summary.html" class="activeNavBar">&#128203; Summary</a></li> <!--link to summary page, class is used to style this-->
+        
+    </ul>
+    </nav>
+    
+    <main> <!-- main is used to wrap main content of the webpage -->
+         <div class="full_page"><!-- div is used as main container for whole page layout -->
+            <div class="top"><!-- div is used to divide page into top section -->
+            <table> <!-- table is used to organise structured information clearly -->
+                <tr> <!-- tr is used for table row -->
+                    <th>Category</th>
+                    <th>Elements</th>
+                    <th>Why I used?</th> <!-- th is used for table headers -->
+                </tr>
+                <tr>
+                    <td>Document Structure   </td>  <!-- td is used to store table data -->
+                    <td>html, head, body, main, section, div, article</td>
+                    <td> To structure and organize the contents throughout the webpage</td>
+                </tr>
+                <tr>
+                    <td>Metadata </td>
+                    <td>meta, title,link  </td>
+                    <td> provide information about the data in the page and link other files to the webpage </td>
+                </tr>
+                <tr>
+                    <td>Navigation   </td>
+                    <td>nav, a </td>
+                    <td> navigate the user to another pages</td>
+                </tr>
+                <tr>
+                    <td>List   </td>
+                    <td>ul, ol, li </td>
+                    <td> display information in ordered and unordered list formats </td>
+                </tr>
+                 <tr>
+                    <td>Text & formatting  </td>
+                    <td>h1, h2, h3, p, span, b, i, u, br, hr </td>
+                    <td>display and format textual content on the webpage</td>
+                </tr>
+                <tr>
+                    <td> Media    </td>
+                    <td>img, video, source, figure, figcaption   </td>
+                    <td>display images, videos, and related captions.</td>
+                </tr>
+                <tr>
+                    <td>Table   </td>
+                    <td>table, tr, th, td  </td>
+                    <td>organize and present structured data in table format</td>
+                </tr>
+                <tr>
+                    <td>Interactive Elements </td>
+                    <td>button</td>
+                    <td>allows user interaction through clickable buttons</td>
+                </tr>
+                <tr>
+                    <td> Attributes </td>
+                    <td>class, lang, charset, name, content, rel, type, href, target, src, alt, title, controls, autoplay, muted </td>
+                    <td>define additional properties, behaviors, and settings for HTML elements.</td>
+                </tr>
+            </table>
+
+            </div>
+            <div class="bottom"> <!-- div is used to divide page into bottom section -->
+
+                <table>
+                <tr>
+                    <th>Category</th>
+                    <th>properties</th>
+                    <th>Why I used?</th>
+                </tr>
+                <tr>
+                    <td>Selectors </td>
+                    <td> Class,Element,Descendant,Pseudo-class,Pseudo-element</td>
+                    <td> used to target and style specific elements and sections of the webpage</td>
+                </tr>
+                <tr>
+                   <td> Webpage layout</td>
+                    <td>display, flex-direction, flex, gap, align-items, justify-content, position, inset, transform, overflow, z-index, margin, padding, width, height, box-sizing </td>
+                    <td> control where things sit on the page and how the layout behaves</td>
+                </tr>
+                <tr>
+                    <td>Text styling</td>
+                    <td>font-family, font-size, font-weight, text-align, text-decoration, font-style, line-height, color </td>
+                    <td>control how text looks </td>
+                </tr>
+                <tr>
+                    <td> Background colors </td>
+                    <td> background, background-color</td>
+                    <td> background colors of the selected elements </td>
+                </tr>
+                 <tr>
+                    <td> Borders</td>
+                    <td>border, border-left, border-radius </td>
+                    <td> make a border of selected elements</td>
+                </tr>
+                <tr>
+                   <td>Images & media fitting  </td>
+                    <td>object-fit </td>
+                    <td>images/videos fit inside their containers without stretching </td>
+                </tr>
+                <tr>
+                    <td> Shadows </td>
+                    <td>box-shadow </td>
+                    <td> to style boxes making them look 3D </td>
+                </tr>
+                <tr>
+                  <td> Animation </td>
+                    <td> transition, cursor, opacity, pointer-events</td>
+                    <td> create animation for the webpage to show some movements </td>
+                </tr>
+                <tr>
+                  <td> Responsive </td>
+                    <td> media </td>
+                    <td> create responsive design for smaller screen size </td>
+                </tr>
+                </table>
+
+            </div>
+         </div>
+
+
+
+
+
+
+    </main>
+    <div class="page_navigation"> <!-- navigation at the bottom -->
+    <div class="nav_buttons"><!-- div is used to make it as an independent box at the bottom of the page and easier to place and style -->
+      <a href="Kaplan.html" class="btn">&larr; Kaplan</a>
+    </div>
+    </div>
+</body>
+</html>
